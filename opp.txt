@@ -1,0 +1,11 @@
+function CheckCakeMob()
+    for i,v in next, Enemies:GetChildren() do
+        if v:IsA("Model") and table.find(cakemobs, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+            return v
+        end
+    end
+end
+local Bosscake = {
+    "Dough King",
+    "Cake Prince"
+}
